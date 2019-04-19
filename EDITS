@@ -1,0 +1,7 @@
+routes.js
+    line 54 - custom email validator
+    line 141 - owner to course check for put
+    line 172 - owner to course check for delete
+
+models.js
+    line 22 - made the password not visible/returned
