@@ -6,6 +6,7 @@ const routes = require('./routes/routes.js');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const jsonParser = require('body-parser');
+const cors = require('cors');
 
 // variable to enable global error logging
 const enableGlobalErrorLogging = process.env.ENABLE_GLOBAL_ERROR_LOGGING === 'true';
@@ -15,6 +16,9 @@ const app = express();
 
 // setup morgan which gives us http request logging
 app.use(morgan('dev'));
+
+// setup cors
+app.use(cors());
 
 // Initiate the json body parser
 app.use(jsonParser());
